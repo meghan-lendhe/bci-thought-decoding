@@ -72,8 +72,8 @@ flowchart TD
     Attn --> Fusion
     
     Fusion --> Guard{"Cognitive Confidence Guard<br/>(Motor Bilateral ERD Check)"}
-    Guard -->|P(Motor) > 0.45| PredMotor["Class: Motor Imagery (0)"]
-    Guard -->|P(Motor) <= 0.45| LatPrior["Bipolar Beta Lateralization Prior<br/>(TP8 - TP7 Asymmetry)"]
+    Guard -->|High Motor Probability| PredMotor["Class: Motor Imagery (0)"]
+    Guard -->|Low Motor / Ambiguous| LatPrior["Bipolar Beta Lateralization Prior<br/>(TP8 - TP7 Asymmetry)"]
     LatPrior --> PredCognitive["Class: Math (1) vs. Word (2)"]
 ```
 
